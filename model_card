@@ -1,0 +1,36 @@
+Model Card
+
+Input:
+The input to the model consists of 64 features, representing 8 consecutive readings from 8 sensors placed on the skin surface to measure electrical activity produced by muscles. 
+The data is colle acted at 200 Hz, resulting in each line representing 40ms of recorded EMG activity. 
+The gestures are categorized into four classes: rock (0), scissors (1), paper (2), and ok (3).
+
+Output:
+The model outputs one of four gesture classes (0, 1, 2, or 3) based on the input EMG data.
+
+Model Architecture:
+The model is a Convolutional Neural Network (CNN) with the following layers:
+
+Input layer reshaping the data into (8, 8, 1)
+Conv2D layer with 32 filters and (3, 3) kernel size, using ReLU activation
+MaxPooling2D layer with (2, 2) pool size
+Flatten layer to convert 2D matrix to 1D vector
+Dense layer with 128 neurons and ReLU activation
+Output Dense layer with 4 neurons and softmax activation
+Performance
+The performance of the model is evaluated using accuracy metrics. 
+The model is trained and validated on a dataset comprising multiple recordings of the specified gestures. 
+The summary graph indicates accuracy across varying configurations of the model, specifically the number of convolutional layers and filters. 
+The highest accuracy achieved is approximately 96%.
+
+Limitations
+The model is trained on data recorded from a single individual's right forearm within a short timespan, which may limit its generalizability to other individuals or conditions. 
+Additionally, it only recognizes four specific gestures, which restricts its applicability to broader gesture recognition tasks.
+
+Trade-offs
+The model's performance may degrade if applied to gestures not included in the training set or if used with data from different sensor placements or individuals. 
+The choice of model architecture, such as the number of convolutional layers and filters, affects the balance between computational complexity and accuracy, as depicted in the performance graph.
+
+
+
+
