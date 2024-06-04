@@ -1,0 +1,61 @@
+## Motivation
+
+- For what purpose was the dataset created? 
+funny enough, it was created by a group of friends for open-sourced prosthetic gesture system to easilyu proedict common gestures for hand prosthesis
+
+ 
+## Composition
+
+- What do the instances that comprise the dataset represent (e.g., documents, photos, people, countries)? 
+64 columns of EMG data from 8 sensor readings were needed to produce the data
+- How many instances of each type are there? 
+4 gestures from said 8 sensors on the MYO armband
+- Is there any missing data?
+n/a
+- Does the dataset contain data that might be considered confidential (e.g., data that is protected by legal privilege or by    doctor–patient confidentiality, data that includes the content of individuals’ non-public communications)?
+n/a
+
+## Collection process
+
+- How was the data acquired? 
+" It connects a muscle activity (EMG, Electromyography) sensor to a user Android/Android Things App. The app collects data, then a server builds a Tensorflow model specifically for this user. After that the model can be downloaded and executed on the device to control motors or other appendages"
+"he MYO armband has 8 sensors placed on skin surface, each measures electrical activity produced by muscles beneath.
+
+Each dataset line has 8 consecutive readings of all 8 sensors. so 64 columns of EMG data. The last column is a resulting gesture that was made while recording the data (classes 0-3)"
+
+
+- If the data is a sample of a larger subset, what was the sampling strategy? 
+n/a
+- Over what time frame was the data collected?
+
+200 HZ soo around 40ms of recording time for muscle contractions
+overall:
+
+Each gesture was recorded 6 times for 20 seconds. Each time recording started with the gesture being already prepared and held. Recording stopped while the gesture was still being held. In total there is 120 seconds of each gesture being held in fixed position."
+
+
+## Preprocessing/cleaning/labelling
+
+- Was any preprocessing/cleaning/labeling of the data done (e.g., discretization or bucketing, tokenization, part-of-speech tagging, SIFT feature extraction, removal of instances, processing of missing values)? If so, please provide a description. If not, you may skip the remaining questions in this section. 
+n/a
+- Was the “raw” data saved in addition to the preprocessed/cleaned/labeled data (e.g., to support unanticipated future uses)? 
+ 
+## Uses
+
+- What other tasks could the dataset be used for? 
+ mainly for This dataset can be used to map user residual muscle gestures to certain actions of a prosthetic such as open/close hand or rotate wrist
+but can be adjusted for optimising current prosthetic angles of motion.
+- Is there anything about the composition of the dataset or the way it was collected and preprocessed/cleaned/labeled that might impact future uses? For example, is there anything that a dataset consumer might need to know to avoid uses that could result in unfair treatment of individuals or groups (e.g., stereotyping, quality of service issues) or other risks or harms (e.g., legal risks, financial harms)? If so, please provide a description. Is there anything a dataset consumer could do to mitigate these risks or harms?
+n/a as long as proper credit is given to prospective software engineers regarding prosthetic limbs, then it is fair use 
+- Are there tasks for which the dataset should not be used? If so, please provide a description.
+anything that doesnt pertain to gait anaysis or prosthetic development, it is a large list of EMG data that has little use in other fields.
+
+## Distribution
+
+- How has the dataset already been distributed? 
+- Is it subject to any copyright or other intellectual property (IP) license, and/or under applicable terms of use (ToU)?  
+
+## Maintenance
+
+- dataset is privately maintained
+
