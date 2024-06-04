@@ -32,7 +32,7 @@ alteration of accuracy metrics to determine overall accuracy of either gesture d
 The highest accuracy achieved is approximately 96%.
 data from the 4 gestures is accurate enough tol be utilised further for finetuning prosthetic motor movement
 
-You can include images of plots using the code below:
+
 ![download](https://github.com/NAlfar/Portfolio_project/assets/171687794/99fd4d6b-3c16-4ffb-8835-85e10f927ec8)
 
 
